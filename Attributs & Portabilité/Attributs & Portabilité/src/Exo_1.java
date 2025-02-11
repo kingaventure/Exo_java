@@ -1,19 +1,27 @@
-public class Exo_1 {
-    public static void main(String[] args) {
-        Livre livre = new Livre();
-        livre.setTitre("Le Petit Prince");
-        System.out.println("Titre du livre: " + livre.getTitre());
+class Livre{
+    private String titre;
+
+    public Livre(String titre){
+        this.titre = titre;
+    }
+
+    public String getLivre(){
+        return this.titre;
+    }
+
+    public void setLivre(String name){
+        this.titre = name;
     }
 }
 
-class Livre {
-    private String titre;
+public class Exo_1 {
+    public static void main(String[] args) throws Exception {
+        Livre livre = new Livre("Super Livre trop cool");
 
-    public String getTitre() {
-        return titre;
-    }
+        System.out.println(livre.getLivre());
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+        livre.setLivre("Super Livre trop cool 2");
+
+        System.out.println(livre.getLivre());
     }
 }

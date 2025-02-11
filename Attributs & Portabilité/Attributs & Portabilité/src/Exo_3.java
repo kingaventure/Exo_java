@@ -1,23 +1,17 @@
 public class Exo_3 {
     public static void main(String[] args) {
-        Chien chien = new Chien();
-        chien.setNom("Rex");
-        System.out.println("Nom du chien: " + chien.getNom());
+        Dog red = new Dog();
+
+        System.out.println(red.getName());
     }
 }
 
 class Animal {
-    protected String nom;
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+    protected String name = "je suis protected";
 }
 
-class Chien extends Animal {
-    
+class Dog extends Animal {
+    public String getName() {
+        return name;
+    }
 }

@@ -1,18 +1,14 @@
 public class Exo_5 {
     public static void main(String[] args) {
-        Voiture voiture = new Voiture("Toyota");
-        System.out.println("Marque de la voiture: " + voiture.getMarque());
+        Voiture voiture = new Voiture("Toyota");  
     }
 }
 
 class Voiture {
-    private String marque;
-
-    public Voiture(String marque) {
-        this.marque = marque;
+    private String marque; 
+    public Voiture(String marque) {  
+        this.marque = marque;  
+        System.out.println("Marque de la voiture: " + marque);  
     }
 
-    public String getMarque() {
-        return marque;
-    }
 }

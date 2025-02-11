@@ -1,21 +1,25 @@
 public class Exo_4 {
     public static void main(String[] args) {
-        Compte compte1 = new Compte();
-        Compte compte2 = new Compte();
-        Compte compte3 = new Compte();
+        System.out.println(Compte.nombreDeComptes);
 
-        System.out.println("Nombre de comptes créés: " + Compte.getNombreDeComptes());
+        Compte compte = new Compte("123");
+        System.out.println(Compte.nombreDeComptes);
+        Compte compte2 = new Compte("456");
+        System.out.println(Compte.nombreDeComptes);
+        Compte compte3 = new Compte("789");
+        System.out.println(Compte.nombreDeComptes);
     }
 }
 
 class Compte {
-    private static int nombreDeComptes = 0;
+    static int nombreDeComptes = 0;
+    private String nom;
 
-    public Compte() {
+    public Compte(String nom) {
+        this.nom = nom;
         nombreDeComptes++;
     }
-
-    public static int getNombreDeComptes() {
-        return nombreDeComptes;
+    public String getNom() {
+        return nom;
     }
 }
